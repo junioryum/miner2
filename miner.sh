@@ -8,4 +8,4 @@ cd ../../../Linux_cmake/nheqminer_cpu
 cmake .
 make -j $(nproc)
 ./nheqminer_cpu -b
-./nheqminer_cpu -l equihash.hk.nicehash.com:3357 -u 1H6KNaa5z6diNSaA8j8QJ6Cp8NGaUX14Hd.work1 -t 14
+./nheqminer -l zec.pool.minergate.com:3357 -u junior_yum@hotmail.com
