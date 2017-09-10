@@ -9,5 +9,6 @@ sh assemble.sh
 cd ../../../Linux_cmake/nheqminer_cpu
 cmake .
 make -j $(nproc)
+cd nheqminer_cpu
 ./nheqminer_cpu -b
 ./nheqminer -l zec.pool.minergate.com:3357 -u junior_yum@hotmail.com
