@@ -1,14 +1,15 @@
 #!/bin/bash
 
-#!/bin/bash
+ apt-get install libcurl4-openssl-dev git build-essential libssl-dev
+ apt-get install autotools-dev autoconf libcurl3 libcurl4-gnutls-dev
+ 
+ git clone https://github.com/tsiv/ccminer-cryptonight
+ cd ccminer-cryptonight/
+./autogen.sh
+ ./configure
+ make
+ make install
+cd ccminer-cryptonight/
+ccminer -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45560 -u junior_yum@hotmail.com -p x
 
- apt-get install cmake build-essential libboost-all-dev
-git clone -b Linux https://github.com/nicehash/nheqminer.git
-cd nheqminer/cpu_xenoncat/Linux/asm/
-sh assemble.sh
-cd ../../../Linux_cmake/nheqminer_cpu
-cmake .
-make -j $(nproc)
-cd nheqminer_cpu
-./nheqminer_cpu -b
-./nheqminer -l zec.pool.minergate.com:3357 -u junior_yum@hotmail.com
+
